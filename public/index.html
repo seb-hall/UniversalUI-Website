@@ -10,8 +10,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
+  
     <link rel="icon" type="image/x-icon" href="media/favicon.ico">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="style/common.css">
 
   </head>
@@ -21,27 +25,45 @@
     <!-- UniversalUI Website, first written by sebhall in march 2023 -->
     <div id="navigationBar">
       <img src="media/icon.png" width=50>
-      <h1>UniversalUI</h1>
+      <h1>UniversalUI.org</h1>
       <div id="navigationMenu">
         <a href="index.html">Home</a>
         <a href="docs.html">Docs</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
         <a href="https://github.com/seb-hall/UniversalUI">GitHub</a>
       </div>
       <div id="hamburger">
-        <img src="media/hamburger.png">
+        <img src="media/hamburger.png" onclick="ShowMenu()">
       </div>
-      
+      <div id="xmark">
+        <img src="media/xmark.png" onclick="HideMenu()">
+      </div>
+
+      <script>
+        function ShowMenu() {
+          document.getElementById("hamburger").style.display = "none";
+          document.getElementById("xmark").style.display = "block"
+          var navBar = document.getElementById("navigationBar");
+          navBar.style.height = "100%";
+        }
+
+        function HideMenu() {
+          document.getElementById("hamburger").style.display = "block";
+          document.getElementById("xmark").style.display = "none"
+          document.getElementById("navigationBar").style.height = "50px"
+        }
+      </script>
     </div> 
 
     <br>
     <br>
 
+    <centre>
+      <h1 style="text-align:center">Welcome to UniversalUI</h1>
+    </centre>
+    
 
-    <div>
-      <h1>Welcome to UniversalUI</h1>
-    </div>
     
   </body>
 
